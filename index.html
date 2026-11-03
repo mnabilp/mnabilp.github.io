@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Nabil Nufail — Data Scientist & Data Analyst</title>
+<title>Muhammad Nabil Nufail Pribadi — Data Scientist & Data Analyst</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet"/>
@@ -37,3 +37,909 @@ body{
 .font-bold{font-weight:700}
 
 /* ── NAV ── */
+nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:1.4rem 4rem;
+  background:rgba(10,10,10,0.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav-title{
+  font-size:0.95rem;
+  font-weight:700;
+  letter-spacing:0.18em;
+  color:var(--text);
+  text-decoration:none;
+  text-transform:uppercase;
+}
+.nav-links{display:flex;gap:2.2rem;list-style:none}
+.nav-links a{
+  color:var(--text-muted);
+  text-decoration:none;
+  font-size:0.75rem;
+  font-weight:400;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--text)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.nav-toggle span{width:22px;height:1px;background:var(--text);display:block}
+
+/* ── BUTTONS ── */
+.btn-primary{
+  display:inline-block;
+  padding:0.75rem 1.8rem;
+  background:var(--text);
+  color:var(--bg);
+  font-weight:700;
+  font-size:0.78rem;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  text-decoration:none;
+  border:1px solid var(--text);
+  transition:all .2s ease;
+}
+.btn-primary:hover{
+  background:transparent;
+  color:var(--text);
+}
+.btn-secondary{
+  display:inline-block;
+  padding:0.75rem 1.8rem;
+  background:transparent;
+  color:var(--text);
+  font-weight:400;
+  font-size:0.78rem;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  text-decoration:none;
+  border:1px solid var(--border-light);
+  transition:all .2s ease;
+}
+.btn-secondary:hover{
+  border-color:var(--text);
+}
+
+/* ── HERO ── */
+#home{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:0 4rem;
+  position:relative;
+  border-bottom:1px solid var(--border);
+}
+.hero-tag{
+  font-size:0.72rem;
+  font-weight:200;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:1.8rem;
+}
+.hero-title{
+  font-size:clamp(2.4rem, 5.5vw, 4.5rem);
+  font-weight:700;
+  line-height:1.15;
+  letter-spacing:-0.03em;
+  margin-bottom:1.5rem;
+}
+.hero-title .sub-line{
+  font-weight:200;
+  color:var(--text-sub);
+  display:block;
+}
+.hero-sub{
+  font-size:1.05rem;
+  font-weight:200;
+  color:var(--text-sub);
+  max-width:680px;
+  line-height:1.9;
+  margin-bottom:2.8rem;
+}
+.hero-btns{display:flex;gap:1.2rem;flex-wrap:wrap}
+
+/* ── COMMON SECTION LAYOUT ── */
+section{padding:7rem 4rem}
+.section-header{margin-bottom:4rem}
+.section-idx{
+  font-size:0.7rem;
+  font-weight:200;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:0.6rem;
+}
+.section-title{
+  font-size:2rem;
+  font-weight:700;
+  letter-spacing:-0.02em;
+  text-transform:uppercase;
+}
+.section-desc{
+  font-size:0.95rem;
+  font-weight:200;
+  color:var(--text-muted);
+  max-width:620px;
+  margin-top:0.8rem;
+  line-height:1.8;
+}
+
+/* ── ABOUT ── */
+#about{background:var(--bg-subtle);border-bottom:1px solid var(--border)}
+.about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:4.5rem;align-items:start}
+.about-text p{
+  font-size:0.95rem;
+  font-weight:200;
+  color:var(--text-sub);
+  margin-bottom:1.5rem;
+  line-height:1.9;
+}
+.about-text strong{
+  font-weight:700;
+  color:var(--text);
+}
+.about-specs{display:grid;gap:1rem;margin-top:2.5rem}
+.spec-item{
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid var(--border);
+  padding-bottom:0.75rem;
+  font-size:0.82rem;
+}
+.spec-label{
+  color:var(--text-muted);
+  font-weight:200;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+}
+.spec-value{
+  color:var(--text);
+  font-weight:400;
+  text-align:right;
+}
+.code-box{
+  background:var(--bg);
+  border:1px solid var(--border);
+  padding:2rem;
+  font-family:monospace;
+  font-size:0.8rem;
+  line-height:1.9;
+  color:var(--text-sub);
+  white-space:pre-wrap;
+}
+
+/* ── EXPERIENCE ── */
+#experience{background:var(--bg);border-bottom:1px solid var(--border)}
+.exp-card{
+  border:1px solid var(--border);
+  background:var(--bg-card);
+  padding:2.5rem;
+}
+.exp-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap:0.8rem;
+  margin-bottom:0.6rem;
+}
+.exp-role{
+  font-size:1.15rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.04em;
+}
+.exp-period{
+  font-size:0.75rem;
+  font-weight:200;
+  letter-spacing:0.12em;
+  color:var(--text-muted);
+  text-transform:uppercase;
+}
+.exp-company{
+  font-size:0.9rem;
+  font-weight:400;
+  color:var(--text-sub);
+  margin-bottom:1.5rem;
+}
+.exp-desc{
+  font-size:0.9rem;
+  font-weight:200;
+  color:var(--text-sub);
+  line-height:1.8;
+  margin-bottom:1.5rem;
+}
+.exp-list{
+  list-style:none;
+  display:grid;
+  gap:0.9rem;
+}
+.exp-list li{
+  position:relative;
+  padding-left:1.5rem;
+  font-size:0.88rem;
+  font-weight:200;
+  color:var(--text-sub);
+  line-height:1.75;
+}
+.exp-list li::before{
+  content:'';
+  position:absolute;
+  left:0;
+  top:0.65rem;
+  width:4px;
+  height:4px;
+  background:var(--text);
+}
+.exp-list strong{
+  font-weight:700;
+  color:var(--text);
+}
+
+/* ── RESUME & TABS ── */
+#resume{background:var(--bg-subtle);border-bottom:1px solid var(--border)}
+.tab-controls{
+  display:flex;
+  gap:1.5rem;
+  border-bottom:1px solid var(--border);
+  margin-bottom:3rem;
+}
+.tab-btn{
+  background:none;
+  border:none;
+  color:var(--text-muted);
+  font-family:var(--font);
+  font-size:0.8rem;
+  font-weight:400;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  padding-bottom:1rem;
+  cursor:pointer;
+  border-bottom:2px solid transparent;
+  transition:all .2s;
+}
+.tab-btn.active{
+  color:var(--text);
+  font-weight:700;
+  border-bottom-color:var(--text);
+}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+
+.clean-list{display:grid;gap:2rem}
+.clean-item{
+  border-left:1px solid var(--border-light);
+  padding-left:1.5rem;
+}
+.clean-year{
+  font-size:0.75rem;
+  font-weight:200;
+  letter-spacing:0.12em;
+  color:var(--text-muted);
+  text-transform:uppercase;
+  margin-bottom:0.3rem;
+}
+.clean-title{
+  font-size:1.05rem;
+  font-weight:700;
+  margin-bottom:0.2rem;
+}
+.clean-org{
+  font-size:0.85rem;
+  font-weight:400;
+  color:var(--text-sub);
+  margin-bottom:0.6rem;
+}
+.clean-desc{
+  font-size:0.88rem;
+  font-weight:200;
+  color:var(--text-muted);
+  line-height:1.8;
+}
+
+/* Skills */
+.skill-category{margin-bottom:2.5rem}
+.skill-heading{
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:1rem;
+}
+.skill-tags{display:flex;flex-wrap:wrap;gap:0.6rem}
+.skill-tag{
+  padding:0.4rem 0.9rem;
+  border:1px solid var(--border);
+  background:var(--bg-card);
+  font-size:0.78rem;
+  font-weight:200;
+  color:var(--text-sub);
+  letter-spacing:0.04em;
+}
+
+/* ── EXPERTISE ── */
+#expertise{background:var(--bg);border-bottom:1px solid var(--border)}
+.expertise-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:1.5rem;
+}
+.expertise-box{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  padding:2.2rem;
+  transition:border-color .2s;
+}
+.expertise-box:hover{border-color:var(--text)}
+.expertise-name{
+  font-size:0.95rem;
+  font-weight:700;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  margin-bottom:0.8rem;
+}
+.expertise-desc{
+  font-size:0.85rem;
+  font-weight:200;
+  color:var(--text-muted);
+  line-height:1.8;
+}
+
+/* ── PROJECTS ── */
+#projects{background:var(--bg-subtle);border-bottom:1px solid var(--border)}
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+  gap:1.5rem;
+}
+.proj-card{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  padding:2.2rem;
+  display:flex;
+  flex-direction:column;
+  text-decoration:none;
+  color:inherit;
+  position:relative;
+  transition:border-color .2s;
+}
+.proj-card:hover{border-color:var(--text)}
+.proj-category{
+  font-size:0.68rem;
+  font-weight:200;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:1rem;
+}
+.proj-title{
+  font-size:1.05rem;
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:0.8rem;
+}
+.proj-text{
+  font-size:0.85rem;
+  font-weight:200;
+  color:var(--text-sub);
+  line-height:1.75;
+  flex:1;
+  margin-bottom:1.5rem;
+}
+.proj-link-hint{
+  font-size:0.75rem;
+  font-weight:400;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  color:var(--text);
+}
+
+/* ── CONTACT ── */
+#contact{background:var(--bg)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
+.contact-card-list{display:grid;gap:1.2rem}
+.contact-row{
+  display:block;
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  padding:1.4rem 1.8rem;
+  text-decoration:none;
+  color:inherit;
+  transition:border-color .2s;
+}
+.contact-row:hover{border-color:var(--text)}
+.contact-label{
+  font-size:0.68rem;
+  font-weight:200;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:0.3rem;
+}
+.contact-val{
+  font-size:0.95rem;
+  font-weight:400;
+}
+.quote-container{
+  border-left:2px solid var(--text);
+  padding-left:2rem;
+  margin-bottom:2.5rem;
+}
+.quote-text{
+  font-size:1.15rem;
+  font-weight:200;
+  line-height:1.7;
+  color:var(--text);
+  margin-bottom:0.8rem;
+}
+.quote-author{
+  font-size:0.75rem;
+  font-weight:400;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--bg);
+  border-top:1px solid var(--border);
+  padding:2rem 4rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:1rem;
+}
+.footer-text{
+  font-size:0.75rem;
+  font-weight:200;
+  color:var(--text-muted);
+}
+.footer-links{display:flex;gap:2rem}
+.footer-links a{
+  font-size:0.75rem;
+  font-weight:400;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  text-decoration:none;
+  transition:color .2s;
+}
+.footer-links a:hover{color:var(--text)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:850px){
+  nav{padding:1.2rem 1.5rem}
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:100%;left:0;right:0;
+    background:var(--bg-subtle);
+    border-bottom:1px solid var(--border);
+    flex-direction:column;
+    padding:1.5rem;
+    gap:1.2rem;
+  }
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  section{padding:5rem 1.5rem}
+  #home{padding:0 1.5rem}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  footer{padding:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a class="nav-title" href="#home">Nabil Nufail</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#resume">Credentials</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+    <span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-tag">Portfolio & Resume</div>
+  <h1 class="hero-title">
+    Muhammad Nabil Nufail<br/>
+    <span class="sub-line">Data Scientist & Analyst</span>
+  </h1>
+  <p class="hero-sub">
+    Turning raw, multi-platform data into reliable ETL pipelines, machine learning models, and automated, decision-ready insights.
+  </p>
+  <div class="hero-btns">
+    <a href="#projects" class="btn-primary">View Projects</a>
+    <a href="https://www.linkedin.com/in/mnabilp/" target="_blank" class="btn-secondary">LinkedIn</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header">
+    <div class="section-idx">01 / Profile</div>
+    <h2 class="section-title">About Me</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        I am an <strong>Informatics graduate (GPA 3.92/4.00)</strong> from Universitas Pembangunan Nasional Veteran Jakarta with a deep foundation in Data Science, Machine Learning, and Data Engineering.
+      </p>
+      <p>
+        My work bridges end-to-end data processing: from academic research in NLP classification algorithms to building production ETL pipelines and reconciliations across advertising and e-commerce ecosystems. Graduated with an <strong>89.41/100</strong> from the intensive Full-Time Data Science Bootcamp at Hacktiv8.
+      </p>
+      <p>
+        Currently working as a <strong>Data Analyst Intern at PT Brighty Global Sinergi</strong>, optimizing multi-platform data integrations and pipeline automation.
+      </p>
+      <div class="about-specs">
+        <div class="spec-item">
+          <span class="spec-label">Location</span>
+          <span class="spec-value">Bekasi / Jakarta, Indonesia</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Education</span>
+          <span class="spec-value">B.Comp.Sci. (Informatics), UPN Veteran Jakarta</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Bootcamp</span>
+          <span class="spec-value">Hacktiv8 Indonesia (Full-Time Data Science)</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Current Role</span>
+          <span class="spec-value">Data Analyst Intern @ PT Brighty Global Sinergi</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="code-box">nabil = {
+    "name"       : "Muhammad Nabil Nufail Pribadi",
+    "background" : "Informatics (S.Kom), UPNVJ",
+    "gpa"        : "3.92 / 4.00",
+    "bootcamp"   : "Hacktiv8 (89.41 / 100)",
+    "current"    : "Data Analyst Intern @ PT Brighty Global Sinergi",
+    "focus"      : [
+        "Data Engineering (ETL)",
+        "Machine Learning",
+        "NLP & Classification"
+    ],
+    "goal"       : "Turn data into actionable insights"
+}</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-header">
+    <div class="section-idx">02 / Experience</div>
+    <h2 class="section-title">Work Experience</h2>
+  </div>
+  <div class="exp-card">
+    <div class="exp-meta">
+      <h3 class="exp-role">Data Analyst Intern</h3>
+      <span class="exp-period">Jul 2026 – Present</span>
+    </div>
+    <div class="exp-company">PT Brighty Global Sinergi — Bekasi, Indonesia</div>
+    <p class="exp-desc">
+      Managing data architecture, automated workflows, and financial reconciliation across a multi-platform digital advertising and e-commerce ecosystem (Meta Ads, TikTok Ads, Shopee Ads, and consignment sales).
+    </p>
+    <ul class="exp-list">
+      <li><strong>Database Design:</strong> Normalized the Meta Ads database to Fifth Normal Form (5NF).</li>
+      <li><strong>Workflow Automation:</strong> Built automated n8n ETL workflows for continuous data upserts, demographic breakdowns, and cross-platform reporting to Google Sheets.</li>
+      <li><strong>API Integrations:</strong> Engineered an n8n workflow leveraging the Shopee Open Platform API (OAuth, automatic token refresh, HMAC-signed requests) exporting order details, logistics, returns, and finance/escrow data into PostgreSQL raw tables and materialized views with idempotent upserts. Automated Logspace API scheduled exports.</li>
+      <li><strong>Backfill & Reconciliation:</strong> Executed multi-month backfills and ingestion of order, payout, wallet, ads, and affiliate records from Shopee, TikTok, and Lazada; reconciled finance records including down payments and tax.</li>
+      <li><strong>Data Validation:</strong> Ensured analytics dashboards (inventory movements, warehouse stock, marketplace wallet/payout) strictly match source systems without data discrepancies.</li>
+      <li><strong>Dashboarding:</strong> Built a comprehensive seller-acquisition dashboard tracking database coverage, PIC distribution, response rate, listing trends, and regional performance.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CREDENTIALS / RESUME -->
+<section id="resume">
+  <div class="section-header">
+    <div class="section-idx">03 / Background</div>
+    <h2 class="section-title">Credentials & Skills</h2>
+  </div>
+
+  <div class="tab-controls">
+    <button class="tab-btn active" data-target="tab-skills">Tech Stack</button>
+    <button class="tab-btn" data-target="tab-edu">Education</button>
+    <button class="tab-btn" data-target="tab-cert">Certifications</button>
+    <button class="tab-btn" data-target="tab-exploring">Currently Exploring</button>
+  </div>
+
+  <!-- Tech Stack -->
+  <div class="tab-panel active" id="tab-skills">
+    <div class="skill-category">
+      <div class="skill-heading">Programming Languages</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">Kotlin</span>
+        <span class="skill-tag">C++</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-heading">Data Engineering & Automation</div>
+      <div class="skill-tags">
+        <span class="skill-tag">n8n</span>
+        <span class="skill-tag">Apache Airflow</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Apache Spark (PySpark)</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-heading">Data Science & Machine Learning</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Pandas</span>
+        <span class="skill-tag">NumPy</span>
+        <span class="skill-tag">Scikit-learn</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">XGBoost</span>
+        <span class="skill-tag">LightGBM</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-heading">Visualization, Cloud & Tools</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Tableau</span>
+        <span class="skill-tag">Kibana</span>
+        <span class="skill-tag">Streamlit</span>
+        <span class="skill-tag">Plotly</span>
+        <span class="skill-tag">Matplotlib / Seaborn</span>
+        <span class="skill-tag">AWS</span>
+        <span class="skill-tag">GCP</span>
+        <span class="skill-tag">MongoDB / Firebase</span>
+        <span class="skill-tag">Git</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="tab-panel" id="tab-edu">
+    <div class="clean-list">
+      <div class="clean-item">
+        <div class="clean-year">2019 – 2024</div>
+        <div class="clean-title">Bachelor of Informatics (S.Kom) — GPA 3.92 / 4.00</div>
+        <div class="clean-org">Universitas Pembangunan Nasional Veteran Jakarta</div>
+        <div class="clean-desc">Undergraduate research in sentiment analysis and classification algorithms using NLP. Core coursework in data structures, algorithms, relational databases, and software engineering.</div>
+      </div>
+      <div class="clean-item">
+        <div class="clean-year">Jan 2026 – Apr 2026</div>
+        <div class="clean-title">Full-Time Data Science Bootcamp — Graduated 89.41 / 100</div>
+        <div class="clean-org">Hacktiv8 Indonesia</div>
+        <div class="clean-desc">Intensive program covering end-to-end data pipelines, exploratory analysis, machine learning modeling, PySpark distributed analytics, orchestration with Airflow, and containerized deployments with Docker.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certifications -->
+  <div class="tab-panel" id="tab-cert">
+    <div class="clean-list">
+      <div class="clean-item">
+        <div class="clean-year">Jul 2026</div>
+        <div class="clean-title">British Airways Data Science Job Simulation</div>
+        <div class="clean-org">Forage</div>
+        <div class="clean-desc">Completed customer feedback predictive modeling and web scraping data science simulations.</div>
+      </div>
+      <div class="clean-item">
+        <div class="clean-year">May 2026</div>
+        <div class="clean-title">SQL (Intermediate) & Python (Basic)</div>
+        <div class="clean-org">HackerRank</div>
+        <div class="clean-desc">Certified competency in structured relational querying, joins, aggregations, and core algorithmic problem solving.</div>
+      </div>
+      <div class="clean-item">
+        <div class="clean-year">2022</div>
+        <div class="clean-title">Android Developer Path</div>
+        <div class="clean-org">Dicoding (MSIB Kampus Merdeka)</div>
+        <div class="clean-desc">Software development training focused on mobile architectures, Kotlin, and API integrations.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Exploring -->
+  <div class="tab-panel" id="tab-exploring">
+    <div class="clean-list">
+      <div class="clean-item">
+        <div class="clean-year">Current Focus</div>
+        <div class="clean-title">Production Workflow Orchestration</div>
+        <div class="clean-desc">Scaling robust data pipelines, monitoring, and automated reconciliation via n8n and Apache Airflow.</div>
+      </div>
+      <div class="clean-item">
+        <div class="clean-year">Current Focus</div>
+        <div class="clean-title">Deep Learning & Transformer Architectures</div>
+        <div class="clean-desc">Advanced NLP sequence modeling, LSTMs, attention mechanisms, and transfer learning workflows.</div>
+      </div>
+      <div class="clean-item">
+        <div class="clean-year">Current Focus</div>
+        <div class="clean-title">MLOps & Real-Time Data Streaming</div>
+        <div class="clean-desc">Bridging model training to production environments via continuous integration, Dockerized deployment, and high-velocity streaming architectures.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="section-header">
+    <div class="section-idx">04 / Capabilities</div>
+    <h2 class="section-title">Areas of Expertise</h2>
+  </div>
+  <div class="expertise-grid">
+    <div class="expertise-box">
+      <div class="expertise-name">Data Engineering</div>
+      <div class="expertise-desc">ETL pipelines, OAuth API integrations, database normalization up to 5NF, backfilling, and multi-source financial reconciliations.</div>
+    </div>
+    <div class="expertise-box">
+      <div class="expertise-name">Machine Learning</div>
+      <div class="expertise-desc">Supervised and unsupervised learning, classification, regression, and tree-based ensembles (LightGBM, XGBoost, Scikit-learn).</div>
+    </div>
+    <div class="expertise-box">
+      <div class="expertise-name">Natural Language Processing</div>
+      <div class="expertise-desc">Text preprocessing, sentiment analysis, and classification pipelines from classical methods to modern transformer architectures.</div>
+    </div>
+    <div class="expertise-box">
+      <div class="expertise-name">Big Data Computing</div>
+      <div class="expertise-desc">Distributed computing and large-scale data manipulation leveraging Apache Spark (PySpark) and PostgreSQL materialized views.</div>
+    </div>
+    <div class="expertise-box">
+      <div class="expertise-name">Analytics & Dashboarding</div>
+      <div class="expertise-desc">Translating business questions into clear visual metrics and dashboards using Tableau, Kibana, Streamlit, and Plotly.</div>
+    </div>
+    <div class="expertise-box">
+      <div class="expertise-name">Pipeline Deployment & Ops</div>
+      <div class="expertise-desc">Containerization with Docker, orchestration using Apache Airflow & n8n, and RESTful API deployment on cloud infrastructure.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header">
+    <div class="section-idx">05 / Portfolio</div>
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-desc">Selected work spanning data engineering pipelines, distributed computing, and machine learning models.</p>
+  </div>
+  <div class="projects-grid">
+    <a class="proj-card" href="https://github.com/mnabilp/RiskBeacon-credit-risk-probability" target="_blank">
+      <div class="proj-category">ML · Airflow · Docker · Streamlit</div>
+      <h3 class="proj-title">RiskBeacon — Credit Risk Probability</h3>
+      <p class="proj-text">Full-stack credit risk scoring platform predicting loan default probability using TensorFlow, LightGBM, and XGBoost, orchestrated with Apache Airflow and Docker.</p>
+      <div class="proj-link-hint">View Repository &rarr;</div>
+    </a>
+    <a class="proj-card" href="https://github.com/mnabilp/Airlines-Customer-Satisfaction-Analysis" target="_blank">
+      <div class="proj-category">ETL · Docker · Airflow · Kibana</div>
+      <h3 class="proj-title">Airlines Customer Satisfaction Analysis</h3>
+      <p class="proj-text">ETL pipeline orchestrated with Apache Airflow in a Dockerized environment, transforming and loading airline survey data with monitoring dashboards in Kibana.</p>
+      <div class="proj-link-hint">View Repository &rarr;</div>
+    </a>
+    <a class="proj-card" href="https://github.com/mnabilp/Computer-Price-Prediction" target="_blank">
+      <div class="proj-category">Regression · Streamlit · Hugging Face</div>
+      <h3 class="proj-title">Computer Price Prediction</h3>
+      <p class="proj-text">Regression model using Scikit-Learn, XGBoost, and Feature-Engine to predict computer hardware pricing, deployed on Hugging Face Spaces with Streamlit.</p>
+      <div class="proj-link-hint">View Repository &rarr;</div>
+    </a>
+    <a class="proj-card" href="https://github.com/mnabilp/pyspark-rice-type-classification" target="_blank">
+      <div class="proj-category">PySpark · Distributed ML</div>
+      <h3 class="proj-title">Rice Type Classification with PySpark</h3>
+      <p class="proj-text">Distributed machine learning pipeline using PySpark and classification algorithms for large-scale agricultural grain datasets.</p>
+      <div class="proj-link-hint">View Repository &rarr;</div>
+    </a>
+    <a class="proj-card" href="https://github.com/mnabilp/restapi" target="_blank">
+      <div class="proj-category">Python · Deployment · API</div>
+      <h3 class="proj-title">REST API Deployment</h3>
+      <p class="proj-text">Design and deployment of production-ready REST API endpoints built with Python to expose predictive model inference.</p>
+      <div class="proj-link-hint">View Repository &rarr;</div>
+    </a>
+    <a class="proj-card" href="https://github.com/mnabilp" target="_blank">
+      <div class="proj-category">Analytics · Tableau</div>
+      <h3 class="proj-title">London Bikeshare Analysis</h3>
+      <p class="proj-text">Interactive Tableau dashboard analyzing London bikeshare ride trends, seasonal usage, and station demand to optimize bike allocation.</p>
+      <div class="proj-link-hint">Explore on GitHub &rarr;</div>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header">
+    <div class="section-idx">06 / Connect</div>
+    <h2 class="section-title">Get In Touch</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card-list">
+      <a class="contact-row" href="mailto:mnabnp@gmail.com">
+        <div class="contact-label">Email</div>
+        <div class="contact-val">mnabnp@gmail.com</div>
+      </a>
+      <a class="contact-row" href="https://www.linkedin.com/in/mnabilp/" target="_blank">
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-val">linkedin.com/in/mnabilp</div>
+      </a>
+      <a class="contact-row" href="https://github.com/mnabilp" target="_blank">
+        <div class="contact-label">GitHub</div>
+        <div class="contact-val">github.com/mnabilp</div>
+      </a>
+      <div class="contact-row">
+        <div class="contact-label">Location</div>
+        <div class="contact-val">Bekasi / Jakarta, Indonesia</div>
+      </div>
+    </div>
+    <div>
+      <div class="quote-container">
+        <div class="quote-text">"Without data, you're just another person with an opinion."</div>
+        <div class="quote-author">W. Edwards Deming</div>
+      </div>
+      <p style="font-size:0.9rem;font-weight:200;color:var(--text-sub);line-height:1.9;margin-bottom:2rem">
+        I am always open to discussing data engineering workflows, machine learning models, or collaborative tech opportunities. Feel free to reach out directly.
+      </p>
+      <a href="mailto:mnabnp@gmail.com" class="btn-primary">Send an Email</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-text">© 2026 Muhammad Nabil Nufail. Minimalist edition.</div>
+  <div class="footer-links">
+    <a href="https://github.com/mnabilp" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/mnabilp/" target="_blank">LinkedIn</a>
+    <a href="mailto:mnabnp@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+// Mobile navigation toggle
+const toggle = document.getElementById('navToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', () => links.classList.remove('open'));
+});
+
+// Credentials Tab switching
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
+
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabBtns.forEach(b => b.classList.remove('active'));
+    tabPanels.forEach(p => p.classList.remove('active'));
+
+    btn.classList.add('active');
+    const targetId = btn.getAttribute('data-target');
+    const targetPanel = document.getElementById(targetId);
+    if (targetPanel) {
+      targetPanel.classList.add('active');
+    }
+  });
+});
+</script>
+</body>
+</html>
+
+```
