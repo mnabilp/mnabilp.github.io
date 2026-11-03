@@ -3,21 +3,22 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Muhammad Nabil Nufail Pribadi — Data Scientist & Data Analyst</title>
+<title>Nabil Nufail — Data Scientist & Data Analyst</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#0a0a0a;
-  --bg-subtle:#121212;
-  --bg-card:#161616;
-  --border:#262626;
-  --border-light:#404040;
-  --text:#f5f5f5;
-  --text-muted:#8e8e8e;
-  --text-sub:#b8b8b8;
+  --bg:#ffffff;
+  --bg-subtle:#f8f9fa;
+  --bg-card:#ffffff;
+  --border:#e5e5e5;
+  --border-light:#d4d4d4;
+  --border-dark:#171717;
+  --text:#000000;
+  --text-muted:#3d3d3d;
+  --text-sub:#1a1a1a;
   --font:'Montserrat',sans-serif;
 }
 html{scroll-behavior:smooth}
@@ -32,7 +33,7 @@ body{
 }
 
 /* ── TYPOGRAPHY HIERARCHY ── */
-.font-thin{font-weight:200}
+.font-thin{font-weight:300}
 .font-normal{font-weight:400}
 .font-bold{font-weight:700}
 
@@ -45,7 +46,7 @@ nav{
   align-items:center;
   justify-content:space-between;
   padding:1.4rem 4rem;
-  background:rgba(10,10,10,0.92);
+  background:rgba(255,255,255,0.92);
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--border);
 }
@@ -99,11 +100,12 @@ nav{
   text-transform:uppercase;
   letter-spacing:0.12em;
   text-decoration:none;
-  border:1px solid var(--border-light);
+  border:1px solid var(--border-dark);
   transition:all .2s ease;
 }
 .btn-secondary:hover{
-  border-color:var(--text);
+  background:var(--text);
+  color:var(--bg);
 }
 
 /* ── HERO ── */
@@ -118,7 +120,7 @@ nav{
 }
 .hero-tag{
   font-size:0.72rem;
-  font-weight:200;
+  font-weight:300;
   letter-spacing:0.25em;
   text-transform:uppercase;
   color:var(--text-muted);
@@ -132,13 +134,13 @@ nav{
   margin-bottom:1.5rem;
 }
 .hero-title .sub-line{
-  font-weight:200;
+  font-weight:300;
   color:var(--text-sub);
   display:block;
 }
 .hero-sub{
   font-size:1.05rem;
-  font-weight:200;
+  font-weight:300;
   color:var(--text-sub);
   max-width:680px;
   line-height:1.9;
@@ -146,12 +148,35 @@ nav{
 }
 .hero-btns{display:flex;gap:1.2rem;flex-wrap:wrap}
 
+
+/* ── HERO WAVE ── */
+#home{overflow:hidden;background:#ffffff}
+#home > *:not(.hero-wave){position:relative;z-index:1}
+.hero-wave{
+  position:absolute;
+  left:0;right:0;bottom:0;
+  height:55%;
+  z-index:0;
+  pointer-events:none;
+}
+.hero-wave svg{
+  position:absolute;
+  bottom:0;left:0;
+  width:200%;
+  height:100%;
+  animation:waveDrift 28s linear infinite;
+}
+.hero-wave .w2{opacity:.95}
+@keyframes waveDrift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.hero-wave svg{animation:none}}
+@media(max-width:850px){.hero-wave{height:45%}}
+
 /* ── COMMON SECTION LAYOUT ── */
 section{padding:7rem 4rem}
 .section-header{margin-bottom:4rem}
 .section-idx{
   font-size:0.7rem;
-  font-weight:200;
+  font-weight:300;
   letter-spacing:0.22em;
   text-transform:uppercase;
   color:var(--text-muted);
@@ -165,7 +190,7 @@ section{padding:7rem 4rem}
 }
 .section-desc{
   font-size:0.95rem;
-  font-weight:200;
+  font-weight:300;
   color:var(--text-muted);
   max-width:620px;
   margin-top:0.8rem;
@@ -177,7 +202,7 @@ section{padding:7rem 4rem}
 .about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:4.5rem;align-items:start}
 .about-text p{
   font-size:0.95rem;
-  font-weight:200;
+  font-weight:300;
   color:var(--text-sub);
   margin-bottom:1.5rem;
   line-height:1.9;
@@ -196,7 +221,7 @@ section{padding:7rem 4rem}
 }
 .spec-label{
   color:var(--text-muted);
-  font-weight:200;
+  font-weight:300;
   letter-spacing:0.08em;
   text-transform:uppercase;
 }
@@ -239,7 +264,7 @@ section{padding:7rem 4rem}
 }
 .exp-period{
   font-size:0.75rem;
-  font-weight:200;
+  font-weight:300;
   letter-spacing:0.12em;
   color:var(--text-muted);
   text-transform:uppercase;
@@ -252,7 +277,7 @@ section{padding:7rem 4rem}
 }
 .exp-desc{
   font-size:0.9rem;
-  font-weight:200;
+  font-weight:300;
   color:var(--text-sub);
   line-height:1.8;
   margin-bottom:1.5rem;
@@ -266,7 +291,7 @@ section{padding:7rem 4rem}
   position:relative;
   padding-left:1.5rem;
   font-size:0.88rem;
-  font-weight:200;
+  font-weight:300;
   color:var(--text-sub);
   line-height:1.75;
 }
@@ -316,12 +341,12 @@ section{padding:7rem 4rem}
 
 .clean-list{display:grid;gap:2rem}
 .clean-item{
-  border-left:1px solid var(--border-light);
+  border-left:1px solid var(--border-dark);
   padding-left:1.5rem;
 }
 .clean-year{
   font-size:0.75rem;
-  font-weight:200;
+  font-weight:300;
   letter-spacing:0.12em;
   color:var(--text-muted);
   text-transform:uppercase;
@@ -340,7 +365,7 @@ section{padding:7rem 4rem}
 }
 .clean-desc{
   font-size:0.88rem;
-  font-weight:200;
+  font-weight:300;
   color:var(--text-muted);
   line-height:1.8;
 }
@@ -361,7 +386,7 @@ section{padding:7rem 4rem}
   border:1px solid var(--border);
   background:var(--bg-card);
   font-size:0.78rem;
-  font-weight:200;
+  font-weight:300;
   color:var(--text-sub);
   letter-spacing:0.04em;
 }
@@ -389,7 +414,7 @@ section{padding:7rem 4rem}
 }
 .expertise-desc{
   font-size:0.85rem;
-  font-weight:200;
+  font-weight:300;
   color:var(--text-muted);
   line-height:1.8;
 }
@@ -415,7 +440,7 @@ section{padding:7rem 4rem}
 .proj-card:hover{border-color:var(--text)}
 .proj-category{
   font-size:0.68rem;
-  font-weight:200;
+  font-weight:300;
   letter-spacing:0.15em;
   text-transform:uppercase;
   color:var(--text-muted);
@@ -429,7 +454,7 @@ section{padding:7rem 4rem}
 }
 .proj-text{
   font-size:0.85rem;
-  font-weight:200;
+  font-weight:300;
   color:var(--text-sub);
   line-height:1.75;
   flex:1;
@@ -459,7 +484,7 @@ section{padding:7rem 4rem}
 .contact-row:hover{border-color:var(--text)}
 .contact-label{
   font-size:0.68rem;
-  font-weight:200;
+  font-weight:300;
   letter-spacing:0.14em;
   text-transform:uppercase;
   color:var(--text-muted);
@@ -476,7 +501,7 @@ section{padding:7rem 4rem}
 }
 .quote-text{
   font-size:1.15rem;
-  font-weight:200;
+  font-weight:300;
   line-height:1.7;
   color:var(--text);
   margin-bottom:0.8rem;
@@ -502,7 +527,7 @@ footer{
 }
 .footer-text{
   font-size:0.75rem;
-  font-weight:200;
+  font-weight:300;
   color:var(--text-muted);
 }
 .footer-links{display:flex;gap:2rem}
@@ -560,9 +585,16 @@ footer{
 
 <!-- HERO -->
 <section id="home">
+  <div class="hero-wave" aria-hidden="true">
+    <svg viewBox="0 0 2880 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path class="w1" fill="rgba(17,17,17,0.07)" d="M0,190 Q360,100 720,190 T1440,190 T2160,190 T2880,190 L2880,500 L0,500 Z"/>
+    <path class="w2" fill="rgba(17,17,17,0.10)" d="M0,250 Q180,190 360,250 T720,250 T1080,250 T1440,250 T1800,250 T2160,250 T2520,250 T2880,250 L2880,500 L0,500 Z"/>
+    <path class="w3" fill="rgba(17,17,17,0.15)" d="M0,320 Q120,280 240,320 T480,320 T720,320 T960,320 T1200,320 T1440,320 T1680,320 T1920,320 T2160,320 T2400,320 T2640,320 T2880,320 L2880,500 L0,500 Z"/>
+    </svg>
+  </div>
   <div class="hero-tag">Portfolio & Resume</div>
   <h1 class="hero-title">
-    Muhammad Nabil Nufail<br/>
+    Muhammad Nabil Nufail Pribadi<br/>
     <span class="sub-line">Data Scientist & Analyst</span>
   </h1>
   <p class="hero-sub">
@@ -725,7 +757,7 @@ footer{
         <div class="clean-year">2019 – 2024</div>
         <div class="clean-title">Bachelor of Informatics (S.Kom) — GPA 3.92 / 4.00</div>
         <div class="clean-org">Universitas Pembangunan Nasional Veteran Jakarta</div>
-        <div class="clean-desc">Undergraduate research in sentiment analysis and classification algorithms using NLP. Core coursework in data structures, algorithms, relational databases, and software engineering.</div>
+        <div class="clean-desc">Undergraduate research in sentiment analysis and classification algorithms using NLP. Core coursework in data structures, algorithms, relational databases, and software engineering[cite: 1].</div>
       </div>
       <div class="clean-item">
         <div class="clean-year">Jan 2026 – Apr 2026</div>
@@ -795,15 +827,15 @@ footer{
     </div>
     <div class="expertise-box">
       <div class="expertise-name">Machine Learning</div>
-      <div class="expertise-desc">Supervised and unsupervised learning, classification, regression, and tree-based ensembles (LightGBM, XGBoost, Scikit-learn).</div>
+      <div class="expertise-desc">Supervised and unsupervised learning, classification, regression, and tree-based ensembles (LightGBM, XGBoost, Scikit-learn)[cite: 1, 2].</div>
     </div>
     <div class="expertise-box">
       <div class="expertise-name">Natural Language Processing</div>
-      <div class="expertise-desc">Text preprocessing, sentiment analysis, and classification pipelines from classical methods to modern transformer architectures.</div>
+      <div class="expertise-desc">Text preprocessing, sentiment analysis, and classification pipelines from classical methods to modern transformer architectures[cite: 1].</div>
     </div>
     <div class="expertise-box">
       <div class="expertise-name">Big Data Computing</div>
-      <div class="expertise-desc">Distributed computing and large-scale data manipulation leveraging Apache Spark (PySpark) and PostgreSQL materialized views.</div>
+      <div class="expertise-desc">Distributed computing and large-scale data manipulation leveraging Apache Spark (PySpark) and PostgreSQL materialized views[cite: 1, 2].</div>
     </div>
     <div class="expertise-box">
       <div class="expertise-name">Analytics & Dashboarding</div>
@@ -821,7 +853,7 @@ footer{
   <div class="section-header">
     <div class="section-idx">05 / Portfolio</div>
     <h2 class="section-title">Featured Projects</h2>
-    <p class="section-desc">Selected work spanning data engineering pipelines, distributed computing, and machine learning models.</p>
+    <p class="section-desc">Selected work spanning data engineering pipelines, distributed computing, and machine learning models[cite: 1].</p>
   </div>
   <div class="projects-grid">
     <a class="proj-card" href="https://github.com/mnabilp/RiskBeacon-credit-risk-probability" target="_blank">
@@ -845,13 +877,13 @@ footer{
     <a class="proj-card" href="https://github.com/mnabilp/pyspark-rice-type-classification" target="_blank">
       <div class="proj-category">PySpark · Distributed ML</div>
       <h3 class="proj-title">Rice Type Classification with PySpark</h3>
-      <p class="proj-text">Distributed machine learning pipeline using PySpark and classification algorithms for large-scale agricultural grain datasets.</p>
+      <p class="proj-text">Distributed machine learning pipeline using PySpark and classification algorithms for large-scale agricultural grain datasets[cite: 1, 2].</p>
       <div class="proj-link-hint">View Repository &rarr;</div>
     </a>
     <a class="proj-card" href="https://github.com/mnabilp/restapi" target="_blank">
       <div class="proj-category">Python · Deployment · API</div>
       <h3 class="proj-title">REST API Deployment</h3>
-      <p class="proj-text">Design and deployment of production-ready REST API endpoints built with Python to expose predictive model inference.</p>
+      <p class="proj-text">Design and deployment of production-ready REST API endpoints built with Python to expose predictive model inference[cite: 1, 2].</p>
       <div class="proj-link-hint">View Repository &rarr;</div>
     </a>
     <a class="proj-card" href="https://github.com/mnabilp" target="_blank">
@@ -893,7 +925,7 @@ footer{
         <div class="quote-text">"Without data, you're just another person with an opinion."</div>
         <div class="quote-author">W. Edwards Deming</div>
       </div>
-      <p style="font-size:0.9rem;font-weight:200;color:var(--text-sub);line-height:1.9;margin-bottom:2rem">
+      <p style="font-size:0.9rem;font-weight:300;color:var(--text-sub);line-height:1.9;margin-bottom:2rem">
         I am always open to discussing data engineering workflows, machine learning models, or collaborative tech opportunities. Feel free to reach out directly.
       </p>
       <a href="mailto:mnabnp@gmail.com" class="btn-primary">Send an Email</a>
